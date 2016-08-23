@@ -2,11 +2,14 @@
   "name"    : "Level_Up",
   "productName" : "Level Up! (Desktop)",
   "version" : "0.1.0",
-  "main"    : "main.js",
+  "main"    : "launcher.js",
   "license" : "Apache 2.0",
   "author" : {
   	"name" : "Mohseen Mukaddam",
   	"email" : "mohseenmukaddam6@gmail.com",
   	"url" : "http://mohseenrm.github.io/"
+  },
+  "scripts" : {
+    "start" : "electron ."
   }
 }
