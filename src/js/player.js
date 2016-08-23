@@ -2,37 +2,43 @@
  * Player Class File
  * Author: Mohseen Mukaddam
  */
-//this is the base class
-class Player{
+//Profile -> (Player, Guild, Skill, Task) Objects
+//Player -> (health, exp, level)
+//https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.bjpp8kl4b
+//https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
+//CommonJS
+//global namespace
+var LEVEL_UP = LEVEL_UP || {};
+/**
+ * Player class will only handle attributes realted to the player object
+ * i.e health, exp, level
+ */
+var Player = function(*args){
+	this.health = health;
+	this.exp = exp;
+	this.level = level;
 
-	constructor(**kwargs){
-		this.name = name;
-		this.age = age;
-		console.log("player created " + this.name);
-	}
-
-	set_experience(exp){
-		this.exp = exp;
-	}
-	set_health(health){
+	console.log("Player created");
+}
+Player.prototype = {
+	constructor: Player,
+	set_health:function(health){
 		this.health = health;
-	}
-	to_level_up(exp){	
-		//override in child class
-		//logic for level up
+	},
+	set_exp:function(exp) {
+		this.exp = exp;
+	},
+	set_level:function(level) {
+		this.level = level;
+	},
+	do_level_up:function(level) {
+		//override to check whether to level up or not
 		//return Boolean
+	},
+	increase_exp:function() {
+		//override to define manner of increasing experience
+	},
+	decrease_health:function () {
+		//override to define manner to decrease health
 	}
-	update_experience(exp){
-		//reset exp to 0 or whatever
-	}
-	level_up(value){
-		//value should be provided by to_value_up function of player
-		if(value == true){
-			this.level = value + 1;
-			//update_experience
-			return true
-		}
-		return false;
-	}
-
 }
