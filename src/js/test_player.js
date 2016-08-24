@@ -1,0 +1,1 @@
+var mamu = Player(100, 10, 1);
