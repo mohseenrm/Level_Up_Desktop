@@ -2,6 +2,7 @@
  * Task Class File
  * Author: Mohseen Mukaddam
  */
+//Action plan -> create all basic classes and init profile
 //(damage will have a base value and that would be updated (i.e reduced as the user levels up))
 //so in effect, there needs to be a level up function modifying these base values
 //Also TaskTracker -> Task[] and stats related to it
