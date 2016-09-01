@@ -54,11 +54,12 @@ LEVEL_UP.SKILLSET = (function () {
 		}
 	};
 
-	//constructor
+	
 	/**
 	*	SkillsetMatric class definition
 	*	-> for generating the matrix object in game
 	*/
+	// constructor
 	var SkillsetMatrix = function(skillsetObj){
 		var _matrix = {
 			iq: skillsetObj.get_attr("iq"),
