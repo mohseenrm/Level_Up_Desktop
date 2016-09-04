@@ -3,168 +3,285 @@
  * Author: Mohseen Mukaddam
  * email: mohseenmukaddam6@gmail.com
  */
+ @import url(http://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed, 
+ figure, figcaption, footer, header, hgroup, 
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+ 	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+ 	font-size: 100%;
+ 	font: inherit;
+ 	vertical-align: baseline;
+ }
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, 
+ footer, header, hgroup, menu, nav, section {
+ 	display: block;
+ }
+ body {
+ 	line-height: 1;
+ }
+ ol, ul {
+ 	list-style: none;
+ }
+ blockquote, q {
+ 	quotes: none;
+ }
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+ 	content: '';
+ 	content: none;
+ }
+ table {
+ 	border-collapse: collapse;
+ 	border-spacing: 0;
+ }
 
-html, body{
-	width: 100%;
-	height: 100%;
-	font-family: helvetica;
-	font-size: 62.5%;
-	background: linear-gradient(5deg, #556270, #C44D58);
-}
-.mother-wrap, .title-wrap, .input-wrap, .footer-wrap{
-	display: flex;
-}
+ html, body{
+ 	width: 100%;
+ 	height: 100%;
+ 	font-family: 'Raleway', helvetica;
+ 	font-size: 62.5%;
+ 	background: -webkit-linear-gradient(#ebece7, white);
+ 	background: -o-linear-gradient(#ebece7, white);
+ 	background: linear-gradient(#ebece7, white);
+ }
+ .mother-wrap, .title-wrap, .input-wrap, .footer-wrap{
+ 	display: flex;
+ }
 
-.mother-wrap{
-	width: 100%;
-	height: 100%;
-	flex-direction: column;
-}
+ .mother-wrap{
+ 	width: 100%;
+ 	height: 100%;
+ 	flex-direction: column;
+ }
 
-.title-wrap{
-	height: 15%;
-	width: 100%;
-	flex-direction: row;
-	align-items: flex-end;
-	justify-content: center;
-}
-.input-wrap{
-	height: 70%;
-	width: 100%;
-	flex-direction: column;
-	justify-content: center;
-}
-.footer-wrap{
-	height: 15%;
-	width: 100%;
-	flex-direction: row;
-	align-content: center;
-	justify-content: center;
-}
+ .title-wrap{
+ 	height: 35%;
+ 	width: 100%;
+ 	flex-direction: row;
+ 	align-items: flex-end;
+ 	justify-content: center;
+ }
+ .input-wrap{
+ 	height: 60%;
+ 	width: 100%;
+ 	flex-direction: column;
+ 	justify-content: center;
+ }
+ .footer-wrap{
+ 	height: 5%;
+ 	width: 100%;
+ 	flex-direction: row;
+ 	align-content: center;
+ 	justify-content: center;
+ }
 
-.launcher-title{
-	font-size: 5rem;
-	color: #f7f7f7;
-}
+ .launcher-title{
+ 	font-size: 5rem;
+ 	color: #f7f7f7;
+ }
 
-/*imported css*/
-span {
-  position: relative;
-  display: inline-block;
-  margin: 30px 10px;
-}
-.balloon {
-  display: inline-block;
-  width: 215px;
-  padding: 10px 0 10px 15px;
-  font-family: "Open Sans", sans;
-  font-weight: 400;
-  color: #377D6A;
-  background: #efefef;
-  border: 0;
-  border-radius: 3px;
-  outline: 0;
-  text-indent: 60px;
-  transition: all .3s ease-in-out;
-}
-.balloon::-webkit-input-placeholder {
-  color: #efefef;
-  text-indent: 0;
-  font-weight: 300;
-}
-.balloon + label {
-  display: inline-block;
-  position: absolute;
-  top: 8px;
-  left: 0;
-  bottom: 8px;
-  padding: 5px 15px;
-  color: #032429;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(19, 74, 70, 0);
-  transition: all .3s ease-in-out;
-  border-radius: 3px;
-  background: rgba(122, 184, 147, 0);
-}
-.balloon + label:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  top: 100%;
-  left: 50%;
-  margin-left: -3px;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  border-top: 3px solid rgba(122, 184, 147, 0);
-  transition: all .3s ease-in-out;
-}
+ /*imported css*/
+ span {
+ 	position: relative;
+ 	display: inline-block;
+ 	margin: 30px 10px;
 
-.balloon:focus,
-.balloon:active {
-  color: #377D6A;
-  text-indent: 0;
-  background: #fff;
-}
-.balloon:focus::-webkit-input-placeholder,
-.balloon:active::-webkit-input-placeholder {
-  color: #aaa;
-}
-.balloon:focus + label,
-.balloon:active + label {
-  color: #fff;
-  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
-  background: #7ab893;
-  transform: translateY(-40px);
-}
-.balloon:focus + label:after,
-.balloon:active + label:after {
-  border-top: 4px solid #7ab893;
-}
-/*End of imported css*/
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+
+ }
+ .balloon {
+ 	display: inline-block;
+ 	width: 40%;
+ 	padding: 10px 0px 12px 15px;
+ 	font-weight: 400;
+ 	color: #377D6A;
+ 	background: #efefef;
+ 	border: 0;
+ 	border-radius: 3px;
+ 	outline: 0;
+ 	transition: all .3s ease-in-out;
+ }
+ .balloon::-webkit-input-placeholder {
+ 	color: #efefef;
+ 	text-indent: 0;
+ 	font-weight: 300;
+ }
+ .balloon + label {
+ 	display: inline-block;
+ 	position: absolute;
+ 	top: 3px;
+ 	left: 30%;
+ 	bottom: 5px;
+ 	padding: 8px 30px;
+ 	color: #032429;
+ 	font-size: 1.5rem;
+ 	font-weight: 700;
+ 	text-transform: uppercase;
+ 	text-shadow: 0 1px 0 rgba(19, 74, 70, 0);
+ 	transition: all .3s ease-in-out;
+ 	border-radius: 3px;
+ 	background: rgba(122, 184, 147, 0);
+ }
+ .balloon + label:after {
+ 	position: absolute;
+ 	content: "";
+ 	width: 0;
+ 	height: 0;
+ 	top: 100%;
+ 	left: 50%;
+ 	margin-left: -3px;
+ 	border-left: 3px solid transparent;
+ 	border-right: 3px solid transparent;
+ 	border-top: 3px solid rgba(122, 184, 147, 0);
+ 	transition: all .3s ease-in-out;
+ }
+
+ .balloon:focus,
+ .balloon:active {
+ 	color: #377D6A;
+ 	text-indent: 0;
+ 	background: #fff;
+ }
+ .balloon:focus::-webkit-input-placeholder,
+ .balloon:active::-webkit-input-placeholder {
+ 	color: #aaa;
+ }
+ .balloon:focus + label,
+ .balloon:active + label {
+ 	color: #fff;
+ 	text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+ 	background: #7ab893;
+ 	transform: translateY(-40px);
+ }
+ .balloon:focus + label:after,
+ .balloon:active + label:after {
+ 	border-top: 4px solid #7ab893;
+ }
+ input{
+ 	font-size: 1.4rem;
+ }
+ #username, #password{
+ 	text-align: left;
+ }
+ /*End of imported css*/
+ .title {
+ 	width: 100%;
+ 	font-weight: 800;
+ 	color: transparent;
+ 	font-size: 120px;
+ 	font-size: 13rem;
+ 	background: url("http://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+ 	background-position: 40% 50%;
+ 	-webkit-background-clip: text;
+ 	position: relative;
+ 	text-align: center;
+ 	line-height: 100px;
+ 	letter-spacing: -8px;
+ }
+ /**
+  * Button Styling
+  */
+
+  .button-container{
+  	display: flex;
+  	width: 100%;
+  	justify-content: center;
+  }
+  .container {
+  	width: 130px;
+  	height: 40px;
+  	text-align: center;
+  }
+
+  button {
+  	outline: none;
+  	height: 40px;
+  	text-align: center;
+  	width: 130px;
+  	border-radius: 40px;
+  	background: #fff;
+  	border: 2px solid #1ECD97;
+  	color: #1ECD97;
+  	letter-spacing: 1px;
+  	text-shadow: 0;
+  	font-size: 12px;
+  	font-weight: bold;
+  	cursor: pointer;
+  	-webkit-transition: all 0.25s ease;
+  	transition: all 0.25s ease;
+  }
+  button:hover {
+  	color: white;
+  	background: #1ECD97;
+  }
+  button:active {
+  	letter-spacing: 2px;
+  }
+  button:after {
+  	content: "SUBMIT";
+  }
+
+  .onclic {
+  	width: 40px;
+  	border-color: #bbbbbb;
+  	border-width: 3px;
+  	font-size: 0;
+  	border-left-color: #1ECD97;
+  	-webkit-animation: rotating 2s 0.25s linear infinite;
+  	animation: rotating 2s 0.25s linear infinite;
+  }
+  .onclic:after {
+  	content: "";
+  }
+  .onclic:hover {
+  	color: #1ECD97;
+  	background: white;
+  }
+
+  .validate {
+  	font-size: 13px;
+  	color: white;
+  	background: #1ECD97;
+  }
+  .validate:after {
+  	font-family: 'FontAwesome';
+  	content: "\f00c";
+  }
+
+  @-webkit-keyframes rotating {
+  	from {
+  		-webkit-transform: rotate(0deg);
+  		transform: rotate(0deg);
+  	}
+  	to {
+  		-webkit-transform: rotate(360deg);
+  		transform: rotate(360deg);
+  	}
+  }
+
+  @keyframes rotating {
+  	from {
+  		-webkit-transform: rotate(0deg);
+  		transform: rotate(0deg);
+  	}
+  	to {
+  		-webkit-transform: rotate(360deg);
+  		transform: rotate(360deg);
+  	}
+  }

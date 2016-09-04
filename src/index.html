@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Level Up! Play and Progress in Life</title>
-    <link rel="stylesheet" type="text/css" href="css/launcher.css">
-    <script type="text/javascript" src="js/player.js"></script>
-    <script type="text/javascript" src="js/test_player.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Level Up! Play and Progress in Life</title>
+
+  <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+  <link rel="stylesheet" type="text/css" href="css/launcher.css">
+
+  <script type="text/javascript" src="js/lib/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+  <script type="text/javascript" src="js/player.js"></script>
+  <script type="text/javascript" src="js/test_player.js"></script>
+
+  <script type="text/javascript" src="js/effect1.js"></script>
+  <script type="text/javascript" src="js/button_effect.js"></script>
     <!--
       this link for the input box: http://codepen.io/bartekd/pen/LtaBl
       http://codepen.io/tyrus/pen/eLlgs
@@ -19,21 +30,23 @@
   </head>
   <body>
     <div class="mother-wrap">
-      
+
       <div class="title-wrap">
-        <span class="launcher-title">Login</span>
+        <div class="title">LEVEL UP</div>
       </div>
 
       <div class="input-wrap">
         <span>
-          <input class="balloon" id="state" type="text" placeholder="Liquid, solid, gaseous..." /><label for="state">State</label>
+          <input class="balloon" id="username" type="text" placeholder="MoMo" /><label for="state" id="label_username">Username</label>
         </span>
-        <span>
-          <input class="balloon" id="planet" type="text" placeholder="Probably Earth" /><label for="planet">Planet</label>
+        <span>  
+          <input class="balloon" id="password" type="password" placeholder="admin" /><label for="planet" id="label_password">Password</label>
         </span>
-        <span>
-          <input class="balloon" id="galaxy" type="text" placeholder="Milky Way?" /><label for="galaxy">Galaxy</label>
-        </span>
+        <div class="button-container">
+          <div class="container">
+            <button id="button"></button>
+          </div>  
+        </div>
       </div>
 
       <div class="footer-wrap">
@@ -41,4 +54,4 @@
 
     </div>
   </body>
-</html>
+  </html>

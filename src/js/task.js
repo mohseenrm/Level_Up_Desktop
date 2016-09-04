@@ -31,7 +31,17 @@ LEVEL_UP.TASK = (function () {
 		get_attr: function (attr) {
 			if(this._valid_attr(attr)){
 				//assuming correct attribute name
-				return(this.attr);
+				switch (attr.toLowerCase()) {
+					case "basegain":
+						return(this._baseGain);
+						break;
+					case "description":
+						return(this._baseDamage)
+						break;
+					default:
+						console.log("Might never get here!");
+						break;
+				}
 			}
 			else{
 				return("Invalid attribute");

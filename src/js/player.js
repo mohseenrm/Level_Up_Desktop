@@ -40,7 +40,7 @@ LEVEL_UP.PLAYER = (function () {
 		},
 		get_level:function () {
 			return(this._level);
-		}
+		},
 		_do_level_up:function (level) {
 			//override to check whether to level up or not
 			//return Boolean
