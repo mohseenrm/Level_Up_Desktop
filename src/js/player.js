@@ -18,7 +18,6 @@ LEVEL_UP.PLAYER = (function () {
 		this._health = health;
 		this._exp = exp;
 		this._level = level;
-
 		console.log("Player created");
 	}
 	Player.prototype = {

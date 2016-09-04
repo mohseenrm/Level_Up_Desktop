@@ -11,9 +11,10 @@ var LEVEL_UP = LEVEL_UP || {};
 LEVEL_UP.TASK = (function () {
 	//class definition and constructor
 	var Task = function (desc, gain, damage) {
-		this.description = "";
+		this.description = desc;
 		this._baseGain = gain;
 		this._baseDamage = damage;
+		console.log("new Task created!");
 	}
 
 	Task.prototype = {
@@ -21,7 +22,7 @@ LEVEL_UP.TASK = (function () {
 		_clean_attr: function (attr) {
 			return(attr.replace("_", "").toLowerCase());
 		},
-		_valid_attr: function () {
+		_valid_attr: function (attr) {
 			//process attribute, remove underscore if it exists and turn case to lower and compare
 			attr = this._clean_attr(attr);
 			if(attr === "description" || attr === "basegain" || attr === "basedamage")
@@ -33,14 +34,14 @@ LEVEL_UP.TASK = (function () {
 				//assuming correct attribute name
 				switch (attr.toLowerCase()) {
 					case "basegain":
-						return(this._baseGain);
-						break;
+					return(this._baseGain);
+					break;
 					case "description":
-						return(this._baseDamage)
-						break;
+					return(this._baseDamage)
+					break;
 					default:
-						console.log("Might never get here!");
-						break;
+					console.log("Might never get here!");
+					break;
 				}
 			}
 			else{
@@ -48,5 +49,8 @@ LEVEL_UP.TASK = (function () {
 				console.log("ERROR: " + "Invalid attribute " + attr);
 			}
 		}
-	};
+	}
+	return{
+		Task: Task
+	}
 })();

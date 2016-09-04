@@ -1,4 +1,3 @@
-// window.$ = window.jQuery = require('./lib/jquery-3.0.0.min.js')
 $(document).ready(function(){
   var mouseX, mouseY;
   var ww = $( window ).width();
@@ -16,7 +15,7 @@ $(document).ready(function(){
     mouseY = e.pageY;
     traX = ((4 * mouseX) / 570) + 40;
     traY = ((4 * mouseY) / 570) + 50;
-    console.log(traX);
+    // console.log(traX);
     $(".title").css({"background-position": traX + "%" + traY + "%"});
   });
 

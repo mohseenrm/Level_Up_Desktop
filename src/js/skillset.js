@@ -32,7 +32,7 @@ LEVEL_UP.SKILLSET = (function () {
 		_clean_attr: function (attr) {
 			//return attribute without underscore and to lower case
 			return(attr.replace("_", "").toLowerCase());
-		}
+		},
 		get_attr: function (attr) {
 			if (this._valid_attr(attr) === true){
 				attr = "_" + attr;
@@ -70,7 +70,7 @@ LEVEL_UP.SKILLSET = (function () {
 		};
 	}
 	SkillsetMatrix.prototype = {
-		constructor = SkillsetMatrix,
+		constructor: SkillsetMatrix,
 		get_matrix: function() {
 			return(this._matrix);
 		},
