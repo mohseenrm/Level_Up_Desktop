@@ -25,7 +25,7 @@ LEVEL_UP.SKILLSET = (function () {
 		_valid_attr: function (attr) {
 			//process attribute, remove underscore if it exists and turn case to lower and compare
 			attr = this._clean_attr(attr);
-			if(attr == "creativity" || attr == "charisma" || attr == "endurance" || attr == "strength" || attr == "iq")
+			if(attr === "creativity" || attr === "charisma" || attr === "endurance" || attr === "strength" || attr === "iq")
 				return(true);
 			return(false);
 		},
