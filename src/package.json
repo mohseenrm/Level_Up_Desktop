@@ -1,15 +1,30 @@
 {
-  "name"    : "Level_Up",
-  "productName" : "Level Up! (Desktop)",
-  "version" : "0.1.0",
-  "main"    : "launcher.js",
-  "license" : "Apache 2.0",
-  "author" : {
-  	"name" : "Mohseen Mukaddam",
-  	"email" : "mohseenmukaddam6@gmail.com",
-  	"url" : "http://mohseenrm.github.io/"
+  "name": "level_up",
+  "productName": "Level Up! (Desktop)",
+  "version": "0.2.0",
+  "main": "launcher.js",
+  "license": "Apache-2.0",
+  "author": "Mohseen Mukaddam <mohseenmukaddam6@gmail.com> (http://mohseenrm.github.io/)",
+  "scripts": {
+    "start": "electron ."
   },
-  "scripts" : {
-    "start" : "electron ."
-  }
+  "description": "Level Up game, Progress in life",
+  "dependencies": {
+    "browserify": "^13.1.0",
+    "jquery": "^3.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohseenrm/Level_Up_Desktop.git"
+  },
+  "keywords": [
+    "Level",
+    "Up",
+    "RPG"
+  ],
+  "bugs": {
+    "url": "https://github.com/mohseenrm/Level_Up_Desktop/issues"
+  },
+  "homepage": "https://github.com/mohseenrm/Level_Up_Desktop#readme"
 }
