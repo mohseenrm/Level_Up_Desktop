@@ -7,7 +7,8 @@
   "author": "Mohseen Mukaddam <mohseenmukaddam6@gmail.com> (http://mohseenrm.github.io/)",
   "scripts": {
     "start": "electron .",
-    "build": "browserify ./js/build.js -o ./js/bundle.js"
+    "build": "browserify ./js/build.js -do ./js/bundle.js",
+    "debug": "browserify --debug ./js/build.js -do ./js/bundle.js"
   },
   "description": "Level Up game, Progress in life",
   "dependencies": {
