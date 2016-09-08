@@ -1,7 +1,9 @@
 //global.jQuery = global.jQuery || require('jquery');
 //var $ = require('../lib/jquery-3.0.0.min');
-var $ = require('jQuery');
+//var $ = require('jQuery');
+require('../lib/babel_jquery');
 require('../lib/jquery-ui.js');
+// import 'jquery-ui';
 
 $(document).ready(function(){
   var mouseX, mouseY;
@@ -9,11 +11,11 @@ $(document).ready(function(){
   var wh = $( window ).height();
   var traX, traY;
   var user_name = $("#username");
-  var label_user, label_password, password;
+  //var label_user, label_password, password;
 
-  label_username = $("#label_username");
-  label_password = $("#label_password");
-  password = $("#password");
+  let label_username = $("#label_username");
+  let label_password = $("#label_password");
+  let password = $("#password");
 
   $(document).mousemove(function(e){
     mouseX = e.pageX;
