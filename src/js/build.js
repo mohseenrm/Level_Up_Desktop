@@ -1,12 +1,12 @@
-require('./class/player');
-require('./class/skillset');
-require('./class/task');
-require('./class/profile');
+// require('./class/player');
+// require('./class/skillset');
+// require('./class/task');
+// require('./class/profile');
 
-require('./test/test_modules');
+// require('./test/test_modules');
 
 require('./animation/button_effect');
 require('./animation/effect1');
 
-//test babel
-require('./test/test_babel');
+//testing CoI
+require('../learning/test_player');
