@@ -8,3 +8,5 @@
 //Second: create generic factory class to create objects for these classes
 //Third: using this as a template implement existing classes to higher functions using CoI
 //Fourth: factory class for the higher level classes
+
+//https://addyosmani.com/resources/essentialjsdesignpatterns/book/#prototypepatternjavascript
