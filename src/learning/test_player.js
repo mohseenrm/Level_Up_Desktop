@@ -3,6 +3,7 @@
  */
 
 let Player = require('./player');
+let Skillset = require('./skillset');
 
 let mohseen = new Player({
 	health: 100,
@@ -12,8 +13,13 @@ let mohseen = new Player({
 
 // console.log(mohseen);
 console.log(mohseen.get_attr());
-// console.log(mohseen.get_attr({
-	// health: health,
-	// exp: exp,
-	// level: level
-// }));
+
+let momo_skills = new Skillset({
+	iq: 10,
+	creativity: 11,
+	charisma: 8,
+	strength: 10,
+	endurance: 5
+});
+
+console.log(momo_skills.get_attr());
