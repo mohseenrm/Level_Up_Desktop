@@ -2,6 +2,8 @@
  * CoI Skillset Class
  * Author: Mohseen Mukaddam
  */
+//update class -> (slow, normal, fast) -> (some value) for levels
+//take the current value, max value, and update function
 'use strict';
 var Skillset = function ( params ) {
 	this._iq = params.iq || 0;
