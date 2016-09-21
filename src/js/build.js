@@ -1,3 +1,4 @@
+'use strict';
 // require('./class/player');
 // require('./class/skillset');
 // require('./class/task');
