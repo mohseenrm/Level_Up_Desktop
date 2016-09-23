@@ -1,53 +1,35 @@
 /**
- * Skill Class File
+ * CoI Skillset Class
  * Author: Mohseen Mukaddam
  */
-//Profile -> (Player, Guild, Skill, Task, SkillsetMatrix) Objects
-//Player -> (health, exp, level)
-/**
- * Player class will only handle attributes realted to the player object
- * i.e health, exp, level
- */
-//Skillset Class definition
-var Skillset = function(IQ, Strength, Creativity, Endurance, Charisma){
-	this._iq = IQ;
-	this._strength = Strength;
-	this._creativity = Creativity;
-	this._endurance = Endurance;
-	this._charisma = Charisma;
-	console.log("Skillset Object created");
-}
+//update class -> (slow, normal, fast) -> (some value) for levels
+//take the current value, max value, and update function
+'use strict';
+var Skillset = function ( params ) {
+	this._iq         = params.iq || 0;
+	this._creativity = params.creativity || 0;
+	this._charisma   = params.charisma || 0;
+	this._strength   = params.strength || 0;
+	this._endurance  = params.endurance || 0;
+	console.log( "Skillset created!!" );
+};
 Skillset.prototype = {
 	constructor: Skillset,
-	_valid_attr: function (attr) {
-		//process attribute, remove underscore if it exists and turn case to lower and compare
-		attr = this._clean_attr(attr);
-		if(attr === "creativity" || attr === "charisma" || attr === "endurance" || attr === "strength" || attr === "iq")
-			return(true);
-		return(false);
+	get_attr: function(){
+		return{
+			iq         : this._iq,
+			creativity : this._creativity,
+			charisma   : this._charisma,
+			strength   : this._charisma,
+			endurance  : this._endurance
+		};
 	},
-	_clean_attr: function (attr) {
-		//return attribute without underscore and to lower case
-		return(attr.replace("_", "").toLowerCase());
-	},
-	get_attr: function (attr) {
-		if (this._valid_attr(attr) === true){
-			attr = "_" + attr;
-			return(this.attr);
-		}
-		else{
-			return("Invalid attribute");
-			console.log("ERROR: " + "Invalid attribute " + attr);
-		}
-	},
-	set_attr: function(attr, value){
-		attr = this._clean_attr(attr);
-		if(this._valid_attr(attr) === true){
-			attr = "_" + attr;
-			this.attr = value;
-		}
-		else
-			console.log("error in setting attribute " + attr);
+	set_attr: function( params ){
+		this._iq         = params.iq || this._iq;
+		this._creativity = params.creativity || this._creativity;
+		this._charisma   = params.charisma || this._charisma;
+		this._strength   = params.strength || this._strength;
+		this._endurance  = params.endurance || this._endurance;
 	}
 };
 module.exports = Skillset;

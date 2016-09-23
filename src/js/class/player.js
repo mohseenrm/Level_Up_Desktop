@@ -1,55 +1,31 @@
 /**
- * Player Class File
+ * CoI Player Class
  * Author: Mohseen Mukaddam
  */
-//Profile -> (Player, Guild, Skill, Task) Objects
-//Player -> (health, exp, level)
-//https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.bjpp8kl4b
-//https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
-/**
- * Player class will only handle attributes realted to the player object
- * i.e health, exp, level
- */
-//Global module
-//Player Class definition
-var Player = function(health, exp, level){
-	this._health = health;
-	this._exp = exp;
-	this._level = level;
-	console.log("Player created");
-}
+'use strict';
+
+var Player = function ( params ) {
+	//constructor
+	this._health = params.health || 0;
+	this._exp = params.exp || 0;
+	this._level = params.level || 0;
+	console.log( "new player with level: "+ this._level +" created!" );
+};
+
 Player.prototype = {
 	constructor: Player,
-	set_health:function (health){
-		this._health = health;
+	set_attr: function ( params ) {
+		this._health = params.health || this._health;
+		this._exp = params.exp || this._exp;
+		this._level = params.level || this._level;
+		console.log( "new stats| Health: " + this._health + "| Exp: " + this._exp + "| Level: " + this._level );
 	},
-	set_exp:function (exp) {
-		this._exp = exp;
-	},
-	set_level:function (level) {
-		this._level = level;
-	},
-	get_health:function () {
-		return(this._health);
-	},
-	get_exp:function () {
-		return(this._exp); 
-	},
-	get_level:function () {
-		return(this._level);
-	},
-	_do_level_up:function (level) {
-		//override to check whether to level up or not
-		//return Boolean
-	},
-	_increase_exp:function () {
-		//override to define manner of increasing experience
-	},
-	_decrease_health:function () {
-		//override to define manner to decrease health
-	},
-	_do_decrease_health:function () {
-		//override to check whether to decrease health
+	get_attr: function () {
+		return{
+			health: this._health,
+			exp: this._exp,
+			level: this._level
+		};
 	}
-}
+};
 module.exports = Player;
