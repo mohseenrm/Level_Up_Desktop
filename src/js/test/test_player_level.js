@@ -1,10 +1,10 @@
 'use strict';
 import { get_base_points, get_max_points, level_update } from '../class/update_modules';
 
-let Player = require( '../class/player' );
+let Player   = require( '../class/player' );
 let Skillset = require( '../class/skillset' );
-let Update = require( '../class/update' );
-let Profile = require( '../class/profile' );
+let Update   = require( '../class/update' );
+let Profile  = require( '../class/profile' );
 
 let mohseen_player = new Player({
 	health     : 40,
@@ -30,3 +30,11 @@ current_data.update_function = level_update;
 // console.log( current_data );
 let mohseen_update = new Update( current_data );
 console.table( mohseen_update );
+
+let mohseen = new Profile({
+	player   : mohseen_player,
+	skillset : mohseen_skill,
+	update   : mohseen_update
+});
+console.table( mohseen );
+console.table( mohseen.Player.get_attr() );

@@ -1,8 +1,31 @@
 /**
- * this is just a test script to check the working of Player class
+ * test player class
  */
+'use strict';
 
-var LEVEL_UP = LEVEL_UP || {};
+import {first_module, second_module} from './samples';
 
-var newPlayer = new LEVEL_UP.PLAYER.Player(100, 15, 1);
-console.table(newPlayer);
+let Player = require( './player' );
+let Skillset = require( './skillset' );
+
+let mohseen = new Player({
+	health: 100,
+	exp: 50,
+	level: 5
+});
+
+// console.log(mohseen);
+console.log( mohseen.get_attr() );
+
+let momo_skills = new Skillset({
+	iq: 10,
+	creativity: 11,
+	charisma: 8,
+	strength: 10,
+	endurance: 5
+});
+
+console.log( momo_skills.get_attr() );
+//CoI right here!
+Player.prototype.new_feature = new first_module();
+mohseen.new_feature.do_something();
