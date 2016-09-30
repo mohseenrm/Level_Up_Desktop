@@ -5,7 +5,7 @@
 
 import {first_module, second_module} from './samples';
 
-let Player = require( './player' );
+let Player   = require( './player' );
 let Skillset = require( './skillset' );
 
 let mohseen = new Player({

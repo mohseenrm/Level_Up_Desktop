@@ -36,5 +36,5 @@ let mohseen = new Profile({
 	skillset : mohseen_skill,
 	update   : mohseen_update
 });
-console.table( mohseen );
-console.table( mohseen.Player.get_attr() );
+console.log( mohseen );
+console.log( mohseen.Player.get_attr() );

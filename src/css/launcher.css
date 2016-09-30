@@ -18,12 +18,12 @@
  figure, figcaption, footer, header, hgroup, 
  menu, nav, output, ruby, section, summary,
  time, mark, audio, video {
- 	margin: 0;
- 	padding: 0;
- 	border: 0;
- 	font-size: 100%;
- 	font: inherit;
- 	vertical-align: baseline;
+  margin         : 0;
+  padding        : 0;
+  border         : 0;
+  font-size      : 100%;
+  font           : inherit;
+  vertical-align : baseline;
  }
  /* HTML5 display-role reset for older browsers */
  article, aside, details, figcaption, figure, 
@@ -45,118 +45,118 @@
  	content: none;
  }
  table {
- 	border-collapse: collapse;
- 	border-spacing: 0;
+  border-collapse : collapse;
+  border-spacing  : 0;
  }
 
  html, body{
- 	width: 100%;
- 	height: 100%;
- 	font-family: 'Raleway', helvetica;
- 	font-size: 62.5%;
- 	background: -webkit-linear-gradient(#ebece7, white);
- 	background: -o-linear-gradient(#ebece7, white);
- 	background: linear-gradient(#ebece7, white);
+  width       : 100%;
+  height      : 100%;
+  font-family : 'Raleway', helvetica;
+  font-size   : 62.5%;
+  background  : -webkit-linear-gradient(#ebece7, white);
+  background  : -o-linear-gradient(#ebece7, white);
+  background  : linear-gradient(#ebece7, white);
  }
  .mother-wrap, .title-wrap, .input-wrap, .footer-wrap{
  	display: flex;
  }
 
  .mother-wrap{
- 	width: 100%;
- 	height: 100%;
- 	flex-direction: column;
+  width          : 100%;
+  height         : 100%;
+  flex-direction : column;
  }
 
  .title-wrap{
- 	height: 35%;
- 	width: 100%;
- 	flex-direction: row;
- 	align-items: flex-end;
- 	justify-content: center;
+  height          : 35%;
+  width           : 100%;
+  flex-direction  : row;
+  align-items     : flex-end;
+  justify-content : center;
  }
  .input-wrap{
- 	height: 60%;
- 	width: 100%;
- 	flex-direction: column;
- 	justify-content: center;
+  height          : 60%;
+  width           : 100%;
+  flex-direction  : column;
+  justify-content : center;
  }
  .footer-wrap{
- 	height: 5%;
- 	width: 100%;
- 	flex-direction: row;
- 	align-content: center;
- 	justify-content: center;
+  height          : 5%;
+  width           : 100%;
+  flex-direction  : row;
+  align-content   : center;
+  justify-content : center;
  }
 
  .launcher-title{
- 	font-size: 5rem;
- 	color: #f7f7f7;
+  font-size : 5rem;
+  color     : #f7f7f7;
  }
 
  /*imported css*/
  span {
- 	position: relative;
- 	display: inline-block;
- 	margin: 30px 10px;
+  position        : relative;
+  display         : inline-block;
+  margin          : 30px 10px;
 
- 	display: flex;
- 	align-items: center;
- 	justify-content: center;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
 
  }
  .balloon {
- 	display: inline-block;
- 	width: 40%;
- 	padding: 10px 0px 12px 15px;
- 	font-weight: 400;
- 	color: #377D6A;
- 	background: #efefef;
- 	border: 0;
- 	border-radius: 3px;
- 	outline: 0;
- 	transition: all .3s ease-in-out;
+  display       : inline-block;
+  width         : 40%;
+  padding       : 10px 0px 12px 15px;
+  font-weight   : 400;
+  color         : #377D6A;
+  background    : #efefef;
+  border        : 0;
+  border-radius : 3px;
+  outline       : 0;
+  transition    : all .3s ease-in-out;
  }
  .balloon::-webkit-input-placeholder {
- 	color: #efefef;
- 	text-indent: 0;
- 	font-weight: 300;
+  color       : #efefef;
+  text-indent : 0;
+  font-weight : 300;
  }
  .balloon + label {
- 	display: inline-block;
- 	position: absolute;
- 	top: 3px;
- 	left: 30%;
- 	bottom: 5px;
- 	padding: 8px 30px;
- 	color: #032429;
- 	font-size: 1.5rem;
- 	font-weight: 700;
- 	text-transform: uppercase;
- 	text-shadow: 0 1px 0 rgba(19, 74, 70, 0);
- 	transition: all .3s ease-in-out;
- 	border-radius: 3px;
- 	background: rgba(122, 184, 147, 0);
+  display        : inline-block;
+  position       : absolute;
+  top            : 3px;
+  left           : 30%;
+  bottom         : 5px;
+  padding        : 8px 30px;
+  color          : #032429;
+  font-size      : 1.5rem;
+  font-weight    : 700;
+  text-transform : uppercase;
+  text-shadow    : 0 1px 0 rgba(19, 74, 70, 0);
+  transition     : all .3s ease-in-out;
+  border-radius  : 3px;
+  background     : rgba(122, 184, 147, 0);
  }
  .balloon + label:after {
- 	position: absolute;
- 	content: "";
- 	width: 0;
- 	height: 0;
- 	top: 100%;
- 	left: 50%;
- 	margin-left: -3px;
- 	border-left: 3px solid transparent;
- 	border-right: 3px solid transparent;
- 	border-top: 3px solid rgba(122, 184, 147, 0);
- 	transition: all .3s ease-in-out;
+  position     : absolute;
+  content      : "";
+  width        : 0;
+  height       : 0;
+  top          : 100%;
+  left         : 50%;
+  margin-left  : -3px;
+  border-left  : 3px solid transparent;
+  border-right : 3px solid transparent;
+  border-top   : 3px solid rgba(122, 184, 147, 0);
+  transition   : all .3s ease-in-out;
  }
 
  .balloon:focus,
  .balloon:active {
- 	color: #377D6A;
- 	text-indent: 0;
- 	background: #fff;
+  color       : #377D6A;
+  text-indent : 0;
+  background  : #fff;
  }
  .balloon:focus::-webkit-input-placeholder,
  .balloon:active::-webkit-input-placeholder {

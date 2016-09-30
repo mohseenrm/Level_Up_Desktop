@@ -16,8 +16,8 @@ Player.prototype = {
 	constructor: Player,
 	set_attr: function ( params ) {
 		this._health = params.health || this._health;
-		this._exp = params.exp || this._exp;
-		this._level = params.level || this._level;
+		this._exp    = params.exp || this._exp;
+		this._level  = params.level || this._level;
 		console.log( "new stats| Health: " + this._health + "| Exp: " + this._exp + "| Level: " + this._level );
 	},
 	get_attr: function () {
