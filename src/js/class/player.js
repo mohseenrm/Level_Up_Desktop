@@ -22,9 +22,9 @@ Player.prototype = {
 	},
 	get_attr: function () {
 		return{
-			health: this._health,
-			exp: this._exp,
-			level: this._level
+			health : this._health,
+			exp    : this._exp,
+			level  : this._level
 		};
 	}
 };

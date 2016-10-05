@@ -1,56 +1,57 @@
 {
-  "name"                 : "level_up",
-  "productName"          : "Level Up! (Desktop)",
-  "version"              : "0.2.0",
-  "main"                 : "launcher.js",
-  "license"              : "Apache-2.0",
-  "author"               : "Mohseen Mukaddam <mohseenmukaddam6@gmail.com> (http://mohseenrm.github.io/)",
-  "scripts"              : {
-  "start"                : "electron .",
-  "build"                : "browserify ./js/build.js -do ./js/bundle.js -t [ babelify --presets [ es2015 ] ]",
-  "debug"                : "browserify --debug ./js/build.js -do ./js/bundle.js -t [ babelify --presets [ es2015 ] ]",
-  "watch"                : "watchify ./js/build.js -o ./js/bundle.js -t babelify --debug --verbose"
+  "name": "level_up",
+  "productName": "Level Up! (Desktop)",
+  "version": "0.2.0",
+  "main": "launcher.js",
+  "license": "Apache-2.0",
+  "author": "Mohseen Mukaddam <mohseenmukaddam6@gmail.com> (http://mohseenrm.github.io/)",
+  "scripts": {
+    "start": "electron .",
+    "build": "browserify --ignore-missing --no-builtins --no-commondir --insert-global-vars=\"global\" --no-browser-field ./js/build.js > ./js/bundle.js -t [ babelify --presets [ es2015 ] ]",
+    "debug": "browserify --ignore-missing --no-builtins --no-commondir --insert-global-vars=\"global\" --no-browser-field --debug ./js/build.js > ./js/bundle.js -t [ babelify --presets [ es2015 ] ]",
+    "watch": "watchify ./js/build.js -o ./js/bundle.js -t babelify --debug --verbose"
   },
-  "description"          : "Level Up game, Progress in life",
-  "dependencies"         : {
-  "browserify"           : "^13.1.0",
-  "jquery"               : "^2.2.4",
-  "jquery-ui"            : "^1.12.0",
-  "jquery-ui-browserify" : "^1.11.0-pre-seelio",
-  "jsdom"                : "^9.5.0"
+  "description": "Level Up game, Progress in life",
+  "dependencies": {
+    "browserify": "^13.1.0",
+    "jquery": "^2.2.4",
+    "jquery-ui": "^1.12.0",
+    "jquery-ui-browserify": "^1.11.0-pre-seelio",
+    "jsdom": "^9.5.0"
   },
-  "devDependencies"      : {
-  "babel-cli"            : "^6.14.0",
-  "babel-preset-es2015"  : "^6.14.0",
-  "babelify"             : "^7.3.0",
-  "browserify"           : "^13.1.0",
-  "browserify-shim"      : "^3.8.12",
-  "watchify"             : "^3.7.0"
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "browserify-shim": "^3.8.12",
+    "uglify-js": "^2.7.3",
+    "watchify": "^3.7.0"
   },
-  "browser"              : {
-  "jQuery"               : "./js/lib/jquery-3.0.0.min.js"
+  "browser": {
+    "jQuery": "./js/lib/jquery-3.0.0.min.js"
   },
-  "browserify-shim"      : {
-  "jQuery"               : {
-  "exports"              : "$"
+  "browserify-shim": {
+    "jQuery": {
+      "exports": "$"
     }
   },
-  "browserify"           : {
-  "transform"            : [
+  "browserify": {
+    "transform": [
       "browserify-shim"
     ]
   },
-  "repository"           : {
-  "type"                 : "git",
-  "url"                  : "https://github.com/mohseenrm/Level_Up_Desktop.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohseenrm/Level_Up_Desktop.git"
   },
-  "keywords"             : [
+  "keywords": [
     "Level",
     "Up",
     "RPG"
   ],
-  "bugs"                 : {
-  "url"                  : "https://github.com/mohseenrm/Level_Up_Desktop/issues"
+  "bugs": {
+    "url": "https://github.com/mohseenrm/Level_Up_Desktop/issues"
   },
-  "homepage"             : "https://github.com/mohseenrm/Level_Up_Desktop#readme"
+  "homepage": "https://github.com/mohseenrm/Level_Up_Desktop#readme"
 }

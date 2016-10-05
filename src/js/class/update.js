@@ -16,7 +16,7 @@ let Update = function( params ){
 	this._current         = params.current || 0;
 	this._level           = params.level || 0;
 	this._update_function = params.update_function || "No function provided";
-	console.log( "Update object created | max:" + this._max + "| current: " + this._current + "| Level: " + this._level + "|Update Function: " + this._update_function );
+	console.log( "Update object created | max:" + this._max + "| current: " + this._current + "| Level: " + this._level + "| Update Function: " + this._update_function );
 };
 
 Update.prototype = {

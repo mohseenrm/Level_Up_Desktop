@@ -9,22 +9,27 @@ let Profile = function(params){
 	this.Player   = params.player || "Player not defined";
 	this.Skillset = params.skillset || "Skillset not defined";
 	this.Update   = params.update || "Updated not defined";
-	console.table( "Profile created| Player: " + this.Player + "| Skillset: " + this.Skillset + "| Update: " + this.Update );
+	this.Tasks    = params.tasks || "No List of task objects provided";
+
+	console.log( "Profile created| Player: " + this.Player + " | Skillset: " + this.Skillset + " | Update: " + this.Update + " | Task List: " + this.Task );
 };
+
 Profile.prototype = {
 	constructor: Profile,
 	get_attr: function () {
 		return{
 			player   : this.Player,
 			skillset : this.Skillset,
-			update   : this.Update
+			update   : this.Update,
+			tasks    : this.Tasks
 		}
 	},
 	set_attr: function( params ) {
 		this.Player   = params.player || this.Player;
 		this.Skillset = params.skillset || this.Skillset;
 		this.Update   = params.update || this.Update;
-		console.table( "Profile updated| Player: " + this.Player + "| Skillset: " + this.Skillset + "| Update: " + this.Update );
+		this.Task     = params.tasks || this.Tasks;
+		console.log( "Profile created| Player: " + this.Player + " | Skillset: " + this.Skillset + " | Update: " + this.Update + " | Task List: " + this.Task );
 	}
 };
 module.exports = Profile;
