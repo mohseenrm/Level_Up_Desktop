@@ -1,5 +1,6 @@
 'use strict';
 //http://stackoverflow.com/questions/26719884/gulp-minify-multiple-js-files-to-one
+//https://css-tricks.com/gulp-for-beginners/
 // require('./class/player');
 // require('./class/skillset');
 // require('./class/task');
