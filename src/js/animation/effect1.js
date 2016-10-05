@@ -1,8 +1,8 @@
 //global.jQuery = global.jQuery || require('jquery');
 //var $ = require('../lib/jquery-3.0.0.min');
 //var $ = require('jQuery');
-require('../lib/babel_jquery');
-require('../lib/jquery-ui.js');
+// require('../lib/babel_jquery');
+// require('../lib/jquery-ui.js');
 // import 'jquery-ui';
 
 $(document).ready(function(){

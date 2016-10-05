@@ -1,10 +1,14 @@
 'use strict';
 import { get_base_points, get_max_points, level_update } from '../class/update_modules';
+import {Player} from '../class/Player';
+import {Skillset} from '../class/skillset';
+import {Update} from '../class/update';
+import {Profile} from '../class/profile';
 
-let Player   = require( '../class/player' );
-let Skillset = require( '../class/skillset' );
-let Update   = require( '../class/update' );
-let Profile  = require( '../class/profile' );
+// let Player   = require( '../class/player' );
+// let Skillset = require( '../class/skillset' );
+// let Update   = require( '../class/update' );
+// let Profile  = require( '../class/profile' );
 
 let mohseen_player = new Player({
 	health     : 40,

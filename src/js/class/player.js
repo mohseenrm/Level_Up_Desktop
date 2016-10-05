@@ -7,8 +7,8 @@
 var Player = function ( params ) {
 	//constructor
 	this._health = params.health || 0;
-	this._exp = params.exp || 0;
-	this._level = params.level || 0;
+	this._exp    = params.exp || 0;
+	this._level  = params.level || 0;
 	console.log( "new player with level: "+ this._level +" created!" );
 };
 
@@ -28,4 +28,4 @@ Player.prototype = {
 		};
 	}
 };
-module.exports = Player;
+export = { Player };

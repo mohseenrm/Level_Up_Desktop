@@ -33,4 +33,4 @@ Skillset.prototype = {
 		console.table( "Skillset Updated | IQ: " + this._iq + "| Creativity: " + this._creativity + "| Charisma: " + this._charisma + "| Strength: " + this._strength + "| Endurance: " + this._endurance  );
 	}
 };
-module.exports = Skillset;
+export = { Skillset };

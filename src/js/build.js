@@ -1,13 +1,4 @@
 'use strict';
-//http://stackoverflow.com/questions/26719884/gulp-minify-multiple-js-files-to-one
-//https://css-tricks.com/gulp-for-beginners/
-//changed
-// require('./class/player');
-// require('./class/skillset');
-// require('./class/task');
-// require('./class/profile');
-
-// require('./test/test_modules');
 
 require( './animation/button_effect' );
 require( './animation/effect1' );

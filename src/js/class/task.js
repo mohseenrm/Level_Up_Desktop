@@ -28,4 +28,4 @@ Task.prototype = {
 		this._update    = params.update || this._update;
 	}
 };
-module.exports = Task;
+export = { Task };

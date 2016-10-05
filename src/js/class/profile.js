@@ -32,4 +32,4 @@ Profile.prototype = {
 		console.log( "Profile created| Player: " + this.Player + " | Skillset: " + this.Skillset + " | Update: " + this.Update + " | Task List: " + this.Task );
 	}
 };
-module.exports = Profile;
+export = { Profile };
