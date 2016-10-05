@@ -1,9 +1,9 @@
 'use strict';
 import { get_base_points, get_max_points, level_update } from '../class/update_modules';
-import {Player} from '../class/Player';
-import {Skillset} from '../class/skillset';
-import {Update} from '../class/update';
-import {Profile} from '../class/profile';
+import { Player   } from '../class/Player';
+import { Skillset } from '../class/skillset';
+import { Update   } from '../class/update';
+import { Profile  } from '../class/profile';
 
 // let Player   = require( '../class/player' );
 // let Skillset = require( '../class/skillset' );
@@ -33,7 +33,7 @@ let current_data = mohseen_player.get_attr();
 current_data.update_function = level_update;
 // console.log( current_data );
 let mohseen_update = new Update( current_data );
-console.table( mohseen_update );
+console.log( mohseen_update );
 
 let mohseen = new Profile({
 	player   : mohseen_player,

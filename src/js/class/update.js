@@ -54,5 +54,5 @@ Update.prototype = {
 		}) );
 	}
 };
-// export { Update };
-module.exports = Update;
+export { Update };
+//module.exports = Update;
