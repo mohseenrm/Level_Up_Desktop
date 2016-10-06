@@ -5,6 +5,13 @@
 
 //const {BrowserWindow} = electron.remote
 //const {BrowserWindow} = require('electron').remote;
+// import $ from 'jquery';
+// import jQuery from 'jquery';
+// // // export for others scripts to use
+// window.$ = $;
+// window.jQuery = jQuery;
+
+// const $ = jQuery = require('jquery')(window);
 
 $(function() {
   $( "#button" ).click(function() {

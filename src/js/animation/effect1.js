@@ -4,6 +4,12 @@
 // require('../lib/babel_jquery');
 // require('../lib/jquery-ui.js');
 // import 'jquery-ui';
+// import $ from 'jquery';
+// import jQuery from 'jquery';
+// // export for others scripts to use
+// window.$ = $;
+// window.jQuery = jQuery;
+// const $ = jQuery = require('jquery')(window);
 
 $(document).ready(function(){
   var mouseX, mouseY;

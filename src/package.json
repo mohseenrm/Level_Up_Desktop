@@ -7,7 +7,7 @@
   "author": "Mohseen Mukaddam <mohseenmukaddam6@gmail.com> (http://mohseenrm.github.io/",
   "scripts": {
     "start": "electron .",
-    "build": "browserify --ignore-missing --no-builtins --no-commondir --insert-global-vars=\"global\" --no-browser-field ./js/build.js > ./js/bundle.js -t [ babelify --presets [ es2015 ] ]",
+    "build": "gulp build",
     "debug": "browserify --ignore-missing --no-builtins --no-commondir --insert-global-vars=\"global\" --no-browser-field --debug ./js/build.js > ./js/bundle.js -t [ babelify --presets [ es2015 ] ]",
     "watch": "watchify ./js/build.js -o ./js/bundle.js -t babelify --debug --verbose"
   },
@@ -26,10 +26,12 @@
     "babelify": "^7.3.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
     "uglify-js": "^2.7.3",
     "watchify": "^3.7.0"
   },
