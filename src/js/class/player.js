@@ -28,4 +28,4 @@ Player.prototype = {
 		};
 	}
 };
-export = { Player };
+export { Player };

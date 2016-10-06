@@ -20,6 +20,6 @@ $(function() {
   function callback() {
       setTimeout(function() {
         $( "#button" ).removeClass( "validate" );
- -    }, 1250 );
+      }, 1250 );
   }
 });
