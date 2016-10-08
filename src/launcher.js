@@ -3,6 +3,9 @@ const { app, BrowserWindow, ipcMain } = require( 'electron' );
 const fs = require( 'fs' );
 const crypto = require( 'crypto' );
 
+const cryptoJSON = require( 'crypto-json' );
+let passKey = '394rwe78fudhwqpwriufdhr8ehyqr9pe8fud';
+/*
 let algorithm = 'aes-256-ctr',
     password = 'd6F3Efeq';
 
@@ -23,7 +26,7 @@ function encrypt( filepath ) {
 let decrypt = ( filepath ) => {
   let decipher = crypto.createDecipher( algorithm, password );
   let decrypt = '';
-  let data = fs.readFileSync( filepath, 'utf-8', ( error ) => {
+  let data = fs.readFileSync( filepath, 'hex', ( error ) => {
     if( error )
       return console.log( 'File error ' + error );
   });
@@ -32,13 +35,51 @@ let decrypt = ( filepath ) => {
   console.log("decrypt : " + decrypt);
   return ( decrypt );
 };
+*/
+
+
+let encrypt = ( filepath ) => {
+  let crypted = '';
+  // let data = JSON.parse( fs.readFileSync( filepath, 'utf-8', ( error ) => {
+  //   if( error )
+  //     return console.log( 'File error ' + error );
+  // } ) );
+  console.log("before require");
+  let data = require( filepath );
+  console.log("after require");
+  console.log("file data: " + data.username + " pwd: " + data.password);
+  crypted = cryptoJSON.encrypt( data, passKey, {
+    keys: ['username']
+  } );
+  console.log("crypt : "+crypted);
+  return( crypted );
+};
+
+
+let decrypt = ( filepath ) => {
+  let decrypt = '';
+  let data = fs.readFileSync( filepath, 'utf-8', ( error ) => {
+    if( error )
+      return console.log( 'File error ' + error );
+  });
+  decrypt = cryptoJSON.decrypt( data, passkey, {
+    keys: ['username']
+  } );
+  console.log("decrypt : " + decrypt);
+  return ( decrypt );
+};
+
 //const encrypt = require( './js/modules/encrypt' );
 //console.log(encrypt);
 //const decrypt = require( './js/modules/decrypt' ).decrypt;
 let data = encrypt( './user/users.json' );
 
-console.log("data is : " + data);
+console.log("data is : " + data.username+ " pwd: " + data.password);
 
+data = JSON.stringify( data );
+
+console.log("stringy : " + data);
+console.log("type of this data: " + typeof data);
 fs.writeFileSync( './js/modules/encrypt', data, ( err ) => {
   if ( err ) 
     console.log(err);
