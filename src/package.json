@@ -1,14 +1,14 @@
 {
   "name": "level_up",
   "productName": "Level Up! (Desktop)",
-  "version": "0.8.3",
+  "version": "0.8.43",
   "main": "launcher.js",
   "license": "Apache-2.0",
   "author": "Mohseen Mukaddam <mohseenmukaddam6@gmail.com> (http://mohseenrm.github.io/",
   "scripts": {
     "start": "electron .",
     "build": "gulp build",
-    "debug": "browserify --ignore-missing --no-builtins --no-commondir --insert-global-vars=\"global\" --no-browser-field --debug ./js/build.js > ./js/bundle.js -t [ babelify --presets [ es2015 ] ]",
+    "debug": "electron --debug=5858 .",
     "watch": "watchify ./js/build.js -o ./js/bundle.js -t babelify --debug --verbose"
   },
   "description": "Level Up game, Progress in life",
@@ -24,6 +24,8 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-register": "^6.16.3",
     "babelify": "^7.3.0",
+    "crypto-json": "^2.0.0",
+    "electron": "^1.4.3",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-bump": "^2.4.0",

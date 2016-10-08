@@ -1,8 +1,12 @@
 'use strict';
-//testing ssh
-//Mohseen
-const {BrowserWindow} = node_require('electron').remote;
-console.log(BrowserWindow);
+
+const { ipcRenderer } = node_require( 'electron' );
+// console.log(BrowserWindow);
+let user_creds = {
+  username : 'MoMo',
+  password : 'admin'
+}
+console.log( ipcRenderer.sendSync( 'auth-user', user_creds ) );
 
 $(function() {
   $( "#button" ).click(function() {
