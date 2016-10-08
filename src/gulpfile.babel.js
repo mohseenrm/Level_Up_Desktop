@@ -49,7 +49,7 @@ gulp.task( 'pre-build', function() {
 	return gutil.log( 'Gulp is running!' );
 });
 
-gulp.task( 'build', ['pre-build', 'clean-js', 'bump'], function() {
+gulp.task( 'build', ['pre-build', 'clean-js', 'bump-patch'], function() {
 	gulp.src( ['!js/lib/*.js', 'js/**/*.js'] )
 		.pipe( sourcemaps.init() )
 		.pipe( babel( {

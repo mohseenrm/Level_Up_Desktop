@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <title>Level Up! Play and Progress in Life</title>
 
+  <script>
+    //for retaining node require! this one was a killer!
+    window.node_require = require;
+    delete window.require;
+    delete window.exports;
+    delete window.module;
+  </script>
+
   <script type="text/javascript" src="js/lib/jquery-3.0.0.min.js"></script>
   <script type="text/javascript" src="js/lib/jquery-ui.js"></script>
 
@@ -12,6 +20,10 @@
 
   <link rel="stylesheet" type="text/css" href="css/launcher.css">
   <script type="text/javascript" src="js/build/build.js"></script>
+
+  <script type="text/javascript">
+    console.log(window.node_require);
+  </script>
   
     <!--
       this link for the input box: http://codepen.io/bartekd/pen/LtaBl

@@ -1,17 +1,7 @@
 'use strict';
-//require('../lib/babel_jquery');
-//using babel import
-// const {BrowserWindow} = require('electron').remote
 
-//const {BrowserWindow} = electron.remote
-//const {BrowserWindow} = require('electron').remote;
-// import $ from 'jquery';
-// import jQuery from 'jquery';
-// // // export for others scripts to use
-// window.$ = $;
-// window.jQuery = jQuery;
-
-// const $ = jQuery = require('jquery')(window);
+const {BrowserWindow} = node_require('electron').remote;
+console.log(BrowserWindow);
 
 $(function() {
   $( "#button" ).click(function() {
