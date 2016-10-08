@@ -1,20 +1,49 @@
-// const { icpMain }            = require( 'ipc-main' );
 const path                   = require( 'path' );
 const { app, BrowserWindow, ipcMain } = require( 'electron' );
 const fs = require( 'fs' );
-// console.log(require.resolve('electron'));
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
-// let auth = require( './js/modules/auth_user' );
-// auth();
-//ipc controls
-const encrypt = require( './js/modules/encrypt' ).encrypt;
-console.log(encrypt);
-const decrypt = require( './js/modules/decrypt' ).decrypt;
-data = encrypt( './user/users.json' );
-fs.writeFile( './js/modules/encrypt', data, ( err ) => {
-  if ( err ) throw err;
-  console.log( 'It\'s saved!' );
+const crypto = require( 'crypto' );
+
+let algorithm = 'aes-256-ctr',
+    password = 'd6F3Efeq';
+
+function encrypt( filepath ) {
+  let cipher = crypto.createCipher( algorithm, password );
+  let crypted = '';
+  let data = fs.readFileSync( filepath, 'utf-8', ( error ) => {
+    if( error )
+      return console.log( 'File error ' + error );
+  });
+  crypted = cipher.update( data, 'utf8', 'hex' );
+  crypted += cipher.final('hex');
+  console.log("crypt : "+crypted);
+  return( crypted );
+};
+
+
+let decrypt = ( filepath ) => {
+  let decipher = crypto.createDecipher( algorithm, password );
+  let decrypt = '';
+  let data = fs.readFileSync( filepath, 'utf-8', ( error ) => {
+    if( error )
+      return console.log( 'File error ' + error );
+  });
+  decrypt = decipher.update( data, 'hex', 'utf8' );
+  decrypt += decipher.final('utf8');
+  console.log("decrypt : " + decrypt);
+  return ( decrypt );
+};
+//const encrypt = require( './js/modules/encrypt' );
+//console.log(encrypt);
+//const decrypt = require( './js/modules/decrypt' ).decrypt;
+let data = encrypt( './user/users.json' );
+
+console.log("data is : " + data);
+
+fs.writeFileSync( './js/modules/encrypt', data, ( err ) => {
+  if ( err ) 
+    console.log(err);
+  else
+    console.log( 'It\'s saved!' );
 });
 
 ipcMain.on( 'auth-user', ( event, args ) => {

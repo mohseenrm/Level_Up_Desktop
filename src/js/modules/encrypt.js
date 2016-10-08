@@ -3,7 +3,7 @@
 const cryptoJSON = require( 'crypto-json' );
 const fs = require( 'fs' );
 
-exports.encrypt = function( filepath ) {
+module.exports = function encrypt( filepath ) {
 	let encrypted = '';
 	fs.readFile( filepath, 'utf-8', ( error, data ) => {
 		if( error )
