@@ -1,16 +1,17 @@
 'use strict'
 
 const cryptoJSON = require( 'crypto-json' );
-const fs = require( 'fs' );
 
-exports.decrypt = ( filepath ) => {
-	let decrypted = '';
-	fs.readFile( filepath, 'utf-8', ( error, data ) => {
-		if( error )
-			return console.log( 'File error ' + error );
-		let pass_key = '707rwe78fudhwqpwriufdhr8ehyqr9pe8fud';
-		decrypted = cryptoJSON.decrypt( data, pass_key );
-	});
-	return ( decrypted );
+let decrypt = ( filepath ) => {
+	let decrypt = '';
+	let passKey = '394rwe78fudhwqpwriufdhr8ehyqr9pe8fud';
+
+	let data = require( filepath );
+	decrypt = cryptoJSON.decrypt( data, passKey, {
+	keys: ['username']
+	} );
+
+	console.log("decrypt : " + decrypt);
+	return ( decrypt );
 };
-// module.exports = decrypt;
+module.exports = decrypt;

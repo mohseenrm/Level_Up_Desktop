@@ -1,74 +1,9 @@
 const path                   = require( 'path' );
 const { app, BrowserWindow, ipcMain } = require( 'electron' );
-const fs = require( 'fs-plus' );
-const crypto = require( 'crypto' );
 const jsonfile = require( 'jsonfile' );
-
-const cryptoJSON = require( 'crypto-json' );
-let passKey = '394rwe78fudhwqpwriufdhr8ehyqr9pe8fud';
-/*
-let algorithm = 'aes-256-ctr',
-    password = 'd6F3Efeq';
-
-function encrypt( filepath ) {
-  let cipher = crypto.createCipher( algorithm, password );
-  let crypted = '';
-  let data = fs.readFileSync( filepath, 'utf-8', ( error ) => {
-    if( error )
-      return console.log( 'File error ' + error );
-  });
-  crypted = cipher.update( data, 'utf8', 'hex' );
-  crypted += cipher.final('hex');
-  console.log("crypt : "+crypted);
-  return( crypted );
-};
-
-
-let decrypt = ( filepath ) => {
-  let decipher = crypto.createDecipher( algorithm, password );
-  let decrypt = '';
-  let data = fs.readFileSync( filepath, 'hex', ( error ) => {
-    if( error )
-      return console.log( 'File error ' + error );
-  });
-  decrypt = decipher.update( data, 'hex', 'utf8' );
-  decrypt += decipher.final('utf8');
-  console.log("decrypt : " + decrypt);
-  return ( decrypt );
-};
-*/
-
-
-let encrypt = ( filepath ) => {
-  let crypted = '';
-
-  let data = require( filepath );
-
-  console.log("file data: " + data.username + " pwd: " + data.password);
-  crypted = cryptoJSON.encrypt( data, passKey, {
-    keys: ['username']
-  } );
-  console.log("crypt : "+crypted);
-  return( crypted );
-};
-
-
-let decrypt = ( filepath ) => {
-  let decrypt = '';
-
-  let data = require( filepath );
-  decrypt = cryptoJSON.decrypt( data, passKey, {
-    keys: ['username']
-  } );
-  console.log("decrypt : " + decrypt);
-  return ( decrypt );
-};
-
-// let data = encrypt( './user/users.json' );
-
-// console.log("data is : " + data.username+ " pwd: " + data.password);
-
-// jsonfile.writeFileSync( './user/users.json', data, {spaces : 2} );
+const encrypt = require( './js/modules/encrypt' );
+const decrypt = require( './js/modules/decrypt' );
+//jsonfile.writeFileSync(filepath, dataObj, {spaces: 2});
 
 ipcMain.on( 'auth-user', ( event, args ) => {
   let level_up_user = {
@@ -82,7 +17,7 @@ ipcMain.on( 'auth-user', ( event, args ) => {
 
   response = (( user_credentials ) => {
     //fetch data from db;
-    recieved_data = decrypt( './user/users.json' );
+    recieved_data = decrypt( '../../user/users.json' );
     console.log("decrypted data : " + recieved_data);
     if( user_credentials.username === recieved_data.username && user_credentials.password === recieved_data.password ){
       return( true );
@@ -91,14 +26,6 @@ ipcMain.on( 'auth-user', ( event, args ) => {
   })( level_up_user );
   event.returnValue = response;
 });
-
-// let auth_user = ( user_credentials ) => {
-//   //fetch data from db;
-//   if( user_credentials.username === 'MoMo' && user_credentials.password === 'admin' ){
-//     return( true );
-//   }
-//   return( false );
-// };
 
 let win;
 

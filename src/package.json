@@ -1,7 +1,7 @@
 {
   "name": "level_up",
   "productName": "Level Up! (Desktop)",
-  "version": "0.8.75",
+  "version": "0.8.78",
   "main": "launcher.js",
   "license": "Apache-2.0",
   "author": "Mohseen Mukaddam <mohseenmukaddam6@gmail.com> (http://mohseenrm.github.io/",
@@ -13,6 +13,7 @@
   },
   "description": "Level Up game, Progress in life",
   "dependencies": {
+    "crypto-json": "^2.0.0",
     "jquery": "^2.2.4",
     "jquery-ui": "^1.12.0",
     "jsdom": "^9.5.0",
