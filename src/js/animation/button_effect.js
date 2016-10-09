@@ -1,7 +1,7 @@
 'use strict';
 
 const { ipcRenderer } = node_require( 'electron' );
-// console.log(BrowserWindow);
+
 let user_creds = {
   username : 'MoMo',
   password : 'admin'
@@ -10,7 +10,7 @@ console.log( ipcRenderer.sendSync( 'auth-user', user_creds ) );
 
 $(function() {
   $( "#button" ).click(function() {
-    $( "#button" ).addClass( "onclic", 250, validate);
+    $( "#button" ).addClass( "onclic", 250, validate );
   });
 
   function validate() {

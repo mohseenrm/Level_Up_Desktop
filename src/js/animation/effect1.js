@@ -1,15 +1,3 @@
-//global.jQuery = global.jQuery || require('jquery');
-//var $ = require('../lib/jquery-3.0.0.min');
-//var $ = require('jQuery');
-// require('../lib/babel_jquery');
-// require('../lib/jquery-ui.js');
-// import 'jquery-ui';
-// import $ from 'jquery';
-// import jQuery from 'jquery';
-// // export for others scripts to use
-// window.$ = $;
-// window.jQuery = jQuery;
-// const $ = jQuery = require('jquery')(window);
 
 $(document).ready(function(){
   var mouseX, mouseY;

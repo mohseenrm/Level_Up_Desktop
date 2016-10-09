@@ -8,10 +8,9 @@ let decrypt = ( filepath ) => {
 
 	let data = require( filepath );
 	decrypt = cryptoJSON.decrypt( data, passKey, {
-	keys: ['username']
+		keys: ['username']
 	} );
 
-	console.log("decrypt : " + decrypt);
 	return ( decrypt );
 };
 module.exports = decrypt;

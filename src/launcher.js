@@ -1,31 +1,46 @@
-const path                   = require( 'path' );
-const { app, BrowserWindow, ipcMain } = require( 'electron' );
-const jsonfile = require( 'jsonfile' );
-const encrypt = require( './js/modules/encrypt' );
-const decrypt = require( './js/modules/decrypt' );
+/**
+ * This is the main file that is called by electron
+ * app, BrowsserWindow, ipcMain can only be called in this file
+ * Author: Mohseen Mukaddam
+ */
+ const path                            = require( 'path' );
+ const { app, BrowserWindow, ipcMain } = require( 'electron' );
+ const jsonfile                        = require( 'jsonfile' );
+ const encrypt                         = require( './js/modules/encrypt' );
+ const decrypt                         = require( './js/modules/decrypt' );
+ // const args = require( 'yargs' );
+
 //jsonfile.writeFileSync(filepath, dataObj, {spaces: 2});
 
-ipcMain.on( 'auth-user', ( event, args ) => {
-  let level_up_user = {
-    username : '',
-    password : ''
-  };
-  console.log( args );
+console.log( 'Resource path: ' + path.dirname( __dirname ) );
 
-  level_up_user.username = args.username || level_up.username;
-  level_up_user.password = args.password || level_up.password;
+const resource_path = path.dirname( __dirname );
 
-  response = (( user_credentials ) => {
-    //fetch data from db;
-    recieved_data = decrypt( '../../user/users.json' );
-    console.log("decrypted data : " + recieved_data);
-    if( user_credentials.username === recieved_data.username && user_credentials.password === recieved_data.password ){
-      return( true );
-    }
-    return( false );
-  })( level_up_user );
-  event.returnValue = response;
-});
+const auth_listner = require( path.join( resource_path, 'src', 'js', 'modules', 'auth_user' ) );
+
+auth_listner( resource_path );
+// ipcMain.on( 'auth-user', ( event, args ) => {
+//   let level_up_user = {
+//     username : '',
+//     password : ''
+//   };
+//   // console.log( args );
+
+//   level_up_user.username = args.username || level_up.username;
+//   level_up_user.password = args.password || level_up.password;
+
+//   response = ( ( user_credentials ) => {
+//     //fetch data from db (so to speak..);
+//     recieved_data = decrypt( path.join( resource_path, 'src', 'user', 'users.json' ) );
+
+//     console.log("decrypted data : " + recieved_data);
+//     if( user_credentials.username === recieved_data.username && user_credentials.password === recieved_data.password ){
+//       return( true );
+//     }
+//     return( false );
+//   } )( level_up_user );
+//   event.returnValue = response;
+// });
 
 let win;
 
