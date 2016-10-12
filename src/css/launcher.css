@@ -263,7 +263,17 @@
   	font-family: 'FontAwesome';
   	content: "\f00c";
   }
-
+  .invalidate{
+    font-size: 13px;
+    color: white;
+    background: #E53939;
+    border: 2px solid #E53939;
+  }
+  .invalidate:after{
+    font-family: 'FontAwesome';
+    content: "\f05e";
+  }
+/*&#xf05e;]*/
   @-webkit-keyframes rotating {
   	from {
   		-webkit-transform: rotate(0deg);
