@@ -3,20 +3,22 @@
  * app, BrowsserWindow, ipcMain can only be called in this file
  * Author: Mohseen Mukaddam
  */
- const path                            = require( 'path' );
- const { app, BrowserWindow, ipcMain } = require( 'electron' );
- const jsonfile                        = require( 'jsonfile' );
- const encrypt                         = require( './js/modules/encrypt' );
- const decrypt                         = require( './js/modules/decrypt' );
- // const args = require( 'yargs' );
+const { app, BrowserWindow, ipcMain } = require( 'electron' );
+const path          = require( 'path' );
+const jsonfile      = require( 'jsonfile' );
 
+const resource_path = path.dirname( __dirname );
+const pwd           = path.join( resource_path, 'src' );
+
+const encrypt       = require( path.join( pwd, 'js', 'modules', 'encrypt' ) );
+const decrypt       = require( path.join( pwd, 'js', 'modules', 'decrypt' ) );
+ // const args = require( 'yargs' );
+ 
 //jsonfile.writeFileSync(filepath, dataObj, {spaces: 2});
 
 console.log( 'Resource path: ' + path.dirname( __dirname ) );
 
-const resource_path = path.dirname( __dirname );
-
-const auth_listner = require( path.join( resource_path, 'src', 'js', 'modules', 'auth_user' ) );
+const auth_listner = require( path.join( pwd, 'js', 'modules', 'auth_user' ) );
 
 auth_listner( resource_path );
 // ipcMain.on( 'auth-user', ( event, args ) => {

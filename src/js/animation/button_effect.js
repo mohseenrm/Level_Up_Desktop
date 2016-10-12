@@ -2,12 +2,6 @@
 
 const { ipcRenderer } = node_require( 'electron' );
 
-// let user_creds = {
-//   username : 'MoMo',
-//   password : 'admin'
-// }
-
-
 $(function() {
 //function definitions
   let get_user_credentials = () => {
@@ -22,15 +16,15 @@ $(function() {
   };
 
 //animations
-  let $button = $( "#button" );
+  let $button    = $( "#button" );
   let class_name = "invalidate";
-  let response = false;
+  let response   = false;
 
   $button.click(function() {
     //get user data
     let user_credentials = get_user_credentials();
     response = ipcRenderer.sendSync( 'auth-user', user_credentials );
-    
+
     console.log( response );
     if( response === true )
       class_name = "validate";
@@ -48,6 +42,7 @@ $(function() {
   function callback() {
       setTimeout(function() {
         $button.removeClass( class_name );
+        //call login method here
       }, 1250 );
   }
 

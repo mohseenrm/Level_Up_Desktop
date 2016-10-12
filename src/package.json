@@ -1,7 +1,7 @@
 {
   "name": "level_up",
   "productName": "Level Up! (Desktop)",
-  "version": "0.9.29",
+  "version": "0.9.30",
   "main": "launcher.js",
   "license": "Apache-2.0",
   "author": "Mohseen Mukaddam <mohseenmukaddam6@gmail.com> (http://mohseenrm.github.io/",
