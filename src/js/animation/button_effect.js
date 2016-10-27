@@ -29,7 +29,7 @@ $(function() {
         let user_credentials = get_user_credentials();
         response = ipcRenderer.sendSync( 'auth-user', user_credentials );
 
-        console.log( response );
+        //console.log( response );
 
         if( response.auth === true )
             class_name = 'validate';
