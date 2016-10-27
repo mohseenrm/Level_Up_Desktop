@@ -21,28 +21,6 @@ console.log( 'Resource path: ' + path.dirname( __dirname ) );
 const auth_listner = require( path.join( pwd, 'js', 'modules', 'auth_user' ) );
 
 auth_listner( resource_path );
-// ipcMain.on( 'auth-user', ( event, args ) => {
-//   let level_up_user = {
-//     username : '',
-//     password : ''
-//   };
-//   // console.log( args );
-
-//   level_up_user.username = args.username || level_up.username;
-//   level_up_user.password = args.password || level_up.password;
-
-//   response = ( ( user_credentials ) => {
-//     //fetch data from db (so to speak..);
-//     recieved_data = decrypt( path.join( resource_path, 'src', 'user', 'users.json' ) );
-
-//     console.log("decrypted data : " + recieved_data);
-//     if( user_credentials.username === recieved_data.username && user_credentials.password === recieved_data.password ){
-//       return( true );
-//     }
-//     return( false );
-//   } )( level_up_user );
-//   event.returnValue = response;
-// });
 
 let win;
 
@@ -51,8 +29,8 @@ function createWindow () {
   // win = new BrowserWindow({width: 800, height: 600})
 
   win = new BrowserWindow({
-    width          : 800,
-    height         : 600
+    width          : 1024,
+    height         : 800
   });
 
   // and load the index.html of the app.

@@ -21,9 +21,11 @@ let auth_listner = ( resource_path ) => {
 			let saved_data = decrypt( path.join( resource_path, 'src', 'user', 'users.json' ) );
 
 			if( user_credentials.username === saved_data.username && user_credentials.password === saved_data.password ){
-				return( true );
+				return( { auth : true,
+						  path : path.join( resource_path, 'src', 'windows', 'profile_page.html' ) } );
 			}
-			return( false );
+			return( { auth : false,
+					  path : 'Invalid credentials' } );
 		} )( level_up_user );
 		//this chats back to the ipcRenderer process
 		event.returnValue = response;
