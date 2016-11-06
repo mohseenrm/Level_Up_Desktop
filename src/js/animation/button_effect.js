@@ -3,8 +3,6 @@
 const { ipcRenderer } = node_require( 'electron' );
 const browser_window = node_require( 'electron' ).remote.getCurrentWindow();
 
-//console.log( browser_window );
-
 $(function() {
 //function definitions
     let get_user_credentials = () => {
