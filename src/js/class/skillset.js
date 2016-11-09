@@ -11,7 +11,8 @@ var Skillset = function ( params ) {
 	this._charisma   = params.charisma || 0;
 	this._strength   = params.strength || 0;
 	this._endurance  = params.endurance || 0;
-	console.table( "Skillset created | IQ: " + this._iq + "| Creativity: " + this._creativity + "| Charisma: " + this._charisma + "| Strength: " + this._strength + "| Endurance: " + this._endurance  );
+	this._leadership = params.leadership || 0;
+	console.table( "Skillset created | IQ: " + this._iq + "| Creativity: " + this._creativity + "| Charisma: " + this._charisma + "| Strength: " + this._strength + "| Endurance: " + this._endurance + "| Leadership: " + this._leadrhip );
 };
 Skillset.prototype = {
 	constructor: Skillset,
@@ -21,7 +22,8 @@ Skillset.prototype = {
 			creativity : this._creativity,
 			charisma   : this._charisma,
 			strength   : this._charisma,
-			endurance  : this._endurance
+			endurance  : this._endurance,
+			leadership : this._leadership
 		};
 	},
 	set_attr: function( params ){
@@ -30,7 +32,9 @@ Skillset.prototype = {
 		this._charisma   = params.charisma || this._charisma;
 		this._strength   = params.strength || this._strength;
 		this._endurance  = params.endurance || this._endurance;
-		console.table( "Skillset Updated | IQ: " + this._iq + "| Creativity: " + this._creativity + "| Charisma: " + this._charisma + "| Strength: " + this._strength + "| Endurance: " + this._endurance  );
+		this._leadership = params.leadership || this._leadership;
+
+		console.table( "Skillset updated | IQ: " + this._iq + "| Creativity: " + this._creativity + "| Charisma: " + this._charisma + "| Strength: " + this._strength + "| Endurance: " + this._endurance + "| Leadership: " + this._leadrhip );
 	}
 };
 export { Skillset };
