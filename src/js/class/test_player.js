@@ -22,7 +22,8 @@ let momo_skills = new Skillset({
 	creativity: 11,
 	charisma: 8,
 	strength: 10,
-	endurance: 5
+	endurance: 5,
+	leadership: 1
 });
 
 console.log( momo_skills.get_attr() );
