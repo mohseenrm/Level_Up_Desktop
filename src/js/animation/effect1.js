@@ -4,18 +4,18 @@ $(document).ready(function(){
   var ww = $( window ).width();
   var wh = $( window ).height();
   var traX, traY;
-  var user_name = $("#username");
-  //var label_user, label_password, password;
 
+  //var label_user, label_password, password;
+  var user_name      = $("#username");
   let label_username = $("#label_username");
   let label_password = $("#label_password");
-  let password = $("#password");
+  let password       = $("#password");
 
   $(document).mousemove(function(e){
     mouseX = e.pageX;
     mouseY = e.pageY;
-    traX = ((4 * mouseX) / 570) + 40;
-    traY = ((4 * mouseY) / 570) + 50;
+    traX   = ((4 * mouseX) / 570) + 40;
+    traY   = ((4 * mouseY) / 570) + 50;
     // console.log(traX);
     $(".title").css({"background-position": traX + "%" + traY + "%"});
   });
