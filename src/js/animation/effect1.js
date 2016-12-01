@@ -4,7 +4,7 @@ $( document ).ready( function(){
   var ww = $( window ).width();
   var wh = $( window ).height();
   var traX, traY;
-  //added visual
+
   //var label_user, label_password, password;
   var user_name      = $( "#username" );
   let label_username = $( "#label_username" );
