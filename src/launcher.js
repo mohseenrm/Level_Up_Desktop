@@ -37,7 +37,8 @@ function createWindow () {
   win.loadURL( 'file://' + path.join( pwd, 'index.html' ) );
 
   // Open the DevTools.
-  // win.webContents.openDevTools();
+  //comment this line to use VSCODE debugger
+  win.webContents.openDevTools();
 
   // Emitted when the window is closed.
   win.on( 'closed', () => {
