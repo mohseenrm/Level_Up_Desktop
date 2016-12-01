@@ -6,7 +6,7 @@
             "type": "chrome",
             "request": "launch",
             "runtimeExecutable": "${workspaceRoot}/src/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron",
-            "sourceMaps": true,
+            "sourceMaps": false,
             // "webRoot": "${workspaceRoot}/src/js/animation/button_effect.js",
             "runtimeArgs": [
                 "${workspaceRoot}/src/",
