@@ -2,30 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch",
-            "type": "node",
+            "name": "Launch Chrome against localhost, with sourcemaps",
+            "type": "chrome",
             "request": "launch",
-            "program": "${workspaceRoot}/src/launcher.js",
-            "stopOnEntry": false,
-            "args": [],
-            "cwd": "${workspaceRoot}/src/",
             "runtimeExecutable": "${workspaceRoot}/src/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron",
+            "sourceMaps": true,
+            // "webRoot": "${workspaceRoot}/src/js/animation/button_effect.js",
             "runtimeArgs": [
-                ".",
-                "--enable-logging"
-            ],
-            "env": {},
-            "externalConsole": false,
-            "sourceMaps": false,
-            "outDir": null
-        },
-        {
-            "name": "Attach",
-            "type": "node",
-            "request": "attach",
-            "port": 5858,
-            "sourceMaps": false,
-            "outDir": null
+                "${workspaceRoot}/src/",
+                "--enable-logging",
+                "--remote-debugging-port=9222"
+            ]
         }
     ]
 }
