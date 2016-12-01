@@ -29,8 +29,8 @@ function createWindow () {
   // win = new BrowserWindow({width: 800, height: 600})
 
   win = new BrowserWindow({
-    width          : 1024,
-    height         : 800
+    width   : 1024,
+    height  : 800
   });
 
   // and load the index.html of the app.
